@@ -1,0 +1,5 @@
+//3) Al posar el mouse sobre un element, modificar el pla aconseguint un efecte semblant a la solució penjada
+
+.stripe:hover:before{
+    transform: scale(3);
+}

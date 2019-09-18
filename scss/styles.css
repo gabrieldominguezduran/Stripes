@@ -1,0 +1,196 @@
+.stripes {
+  height: 100vh;
+}
+
+.stripes .stripe {
+  float: left;
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: lightcoral;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  width: 19.6%;
+}
+
+.stripes .stripe:nth-child(n) {
+  margin-bottom: 0.5%;
+  margin-right: 0.5%;
+}
+
+.stripes .stripe:nth-child(5n) {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.stripes .stripe h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 3.5vw;
+  font-weight: normal;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.stripes .stripe1 {
+  background-color: #244F75;
+}
+
+.stripes .stripe2 {
+  background-color: #60BFBF;
+}
+
+.stripes .stripe3 {
+  background-color: #8C4B7E;
+}
+
+.stripes .stripe4 {
+  background-color: #F8BB44;
+}
+
+.stripes .stripe5 {
+  background-color: #F24B4B;
+}
+
+.stripe::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  background-color: white;
+  opacity: 0.1;
+  -webkit-transform: skew(25deg);
+          transform: skew(25deg);
+  width: 100%;
+  height: inherit;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.stripe:hover:before {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-110%);
+            transform: translateY(-110%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(110%);
+            transform: translateY(110%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(110%);
+            transform: translateY(110%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.stripe1 {
+  -webkit-animation: .5s ease-out 0s 1 slideInFromLeft both;
+          animation: .5s ease-out 0s 1 slideInFromLeft both;
+}
+
+.stripe2 {
+  -webkit-animation: .5s ease-out .1s 1 slideUp both;
+          animation: .5s ease-out .1s 1 slideUp both;
+}
+
+.stripe3 {
+  -webkit-animation: .5s ease-out .2s 1 slideDown both;
+          animation: .5s ease-out .2s 1 slideDown both;
+}
+
+.stripe4 {
+  -webkit-animation: .5s ease-out .3s 1 slideUp both;
+          animation: .5s ease-out .3s 1 slideUp both;
+}
+
+.stripe5 {
+  -webkit-animation: .5s ease-out .4s 1 slideInFromRight both;
+          animation: .5s ease-out .4s 1 slideInFromRight both;
+}
+/*# sourceMappingURL=styles.css.map */

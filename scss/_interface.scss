@@ -1,0 +1,43 @@
+@import 'variables';
+
+.stripes{
+  height: 100vh;
+
+  .stripe{
+    float: left;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: lightcoral;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    @include imagegrid(5, .5%);
+    
+    h1{
+      font-family: "Lato", sans-serif;
+      font-size: 3.5vw;
+      font-weight: normal;
+      align-self: center; 
+    }
+  
+    
+  
+  }
+    
+    
+     $color-stripes:(//como hacer un objeto con key-value
+    'stripe1': $block1,
+    'stripe2': $block2,
+    'stripe3': $block3,
+    'stripe4': $block4,
+    'stripe5': $block5
+  );
+
+  @each $key, $value in $color-stripes {
+  	.#{$key} {
+    background-color: $value;
+	  }
+  }
+}
