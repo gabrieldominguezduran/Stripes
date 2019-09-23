@@ -1,15 +1,13 @@
-//Abans d’afegir cada strip, (:before), afegirem un pla blanc deformat amb una opacitat de 0.1. Utilitzarem la funció: Skew
-
-.stripe::before { 
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -10;
-    background-color: white;
-    opacity: 0.1;
-    transform: skew(25deg);
-    width: 100%;
-    height: inherit;
-    transition: transform .3s ;
-  }
+.stripe::before {
+	content: ' ';
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -10;
+	background-color: white;
+	opacity: 0.1;
+	transform: skew(25deg);
+	width: 100%;
+	height: inherit;
+	transition: transform 0.3s;
+}
